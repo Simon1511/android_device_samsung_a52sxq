@@ -129,6 +129,9 @@ on boot
     write /proc/sys/vm/swappiness 130
     write /proc/sys/vm/page-cluster 0
 
+    # light sensor
+    write /sys/class/sensors/light_sensor/lcd_onoff 1
+
 # Pageboostd
 on property:sys.boot_completed=1
     start pageboostd
