@@ -31,6 +31,9 @@ TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
 # Display
 TARGET_SCREEN_DENSITY := 450
 
+# NFC
+TARGET_HAVE_SEC_NFC := true
+
 # OTA assert
 TARGET_OTA_ASSERT_DEVICE := a52sxq
 
