@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_a52sxq.mk
+    $(LOCAL_DIR)/aosp_a52sxq.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_a52sxq-userdebug \
-    lineage_a52sxq-user \
-    lineage_a52sxq-eng
+    aosp_a52sxq-userdebug \
+    aosp_a52sxq-user \
+    aosp_a52sxq-eng
