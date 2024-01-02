@@ -82,9 +82,6 @@ blk-sec-stats.ko
 tea5767.ko
 tcp_htcp.ko
 qca_cld3_wlan.ko
-qca_cld3_qca6750.ko
-qca_cld3_wlan.ko
-qca_cld3_qca6750.ko
 rmnet_core.ko
 rmnet_ctl.ko
 rmnet_offload.ko
