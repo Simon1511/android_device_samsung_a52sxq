@@ -17,23 +17,8 @@
 INSTALLED_KERNEL_TARGET := $(PRODUCT_OUT)/kernel
 recovery_uncompressed_ramdisk := $(PRODUCT_OUT)/ramdisk-recovery.cpio
 
-RECOVERY_KMOD_TARGETS := \
-    sec_cmd.ko \
-    sec_common_fn.ko \
-    sec_secure_touch.ko \
-    sec_tclm_v2.ko \
-    sec_tsp_dumpkey.ko \
-    sec_tsp_log.ko \
-    stm_ts.ko
-
 RECOVERY_FIRMWARE_TARGETS := \
     fts5cu56a_a52sxq.bin
-
-INSTALLED_RECOVERY_KMOD_TARGETS := $(RECOVERY_KMOD_TARGETS:%=$(TARGET_RECOVERY_ROOT_OUT)/vendor/lib/modules/%)
-$(INSTALLED_RECOVERY_KMOD_TARGETS): $(INSTALLED_KERNEL_TARGET)
-	echo -e ${CL_GRN}"Copying kernel modules to recovery"${CL_RST}
-	@mkdir -p $(dir $@)
-	cp $(@F:%=$(TARGET_OUT_VENDOR)/lib/modules/%) $(TARGET_RECOVERY_ROOT_OUT)/vendor/lib/modules/
 
 INSTALLED_RECOVERY_FIRMWARE_TARGETS := $(RECOVERY_FIRMWARE_TARGETS:%=$(TARGET_RECOVERY_ROOT_OUT)/vendor/firmware/tsp_stm/%)
 $(INSTALLED_RECOVERY_FIRMWARE_TARGETS): $(INSTALLED_KERNEL_TARGET)
@@ -41,4 +26,4 @@ $(INSTALLED_RECOVERY_FIRMWARE_TARGETS): $(INSTALLED_KERNEL_TARGET)
 	@mkdir -p $(dir $@)
 	cp $(@F:%=$(TARGET_OUT_VENDOR)/firmware/tsp_stm/%) $(TARGET_RECOVERY_ROOT_OUT)/vendor/firmware/tsp_stm/
 
-$(recovery_uncompressed_ramdisk): $(INSTALLED_RECOVERY_KMOD_TARGETS) $(INSTALLED_RECOVERY_FIRMWARE_TARGETS)
+$(recovery_uncompressed_ramdisk): $(INSTALLED_RECOVERY_FIRMWARE_TARGETS)
