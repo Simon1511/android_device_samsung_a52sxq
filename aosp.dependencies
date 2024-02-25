@@ -2,13 +2,13 @@
    {
       "repository":"vendor_samsung_a52sxq",
       "target_path":"vendor/samsung/a52sxq",
-      "branch":"thirteen",
+      "branch":"fourteen",
       "remote":"pixel-devices-blobs"
    },
    {
       "repository":"device_samsung_sm7325-common",
       "target_path":"device/samsung/sm7325-common",
-      "branch":"thirteen-plus",
+      "branch":"fourteen-plus",
       "remote":"pixel-devices"
    }
 ]
