@@ -1,4 +1,4 @@
-# All blobs are from A528BXXS5FWL4 (U), unless pinned
+# All blobs are from A528BXXS8GXF5 (U), unless pinned
 
 # Audio
 vendor/lib/hw/audio.primary.lahaina.so
@@ -29,8 +29,8 @@ vendor/firmware/bt_nvm_loading.xml
 # Camera
 vendor/lib/hw/camera.qcom.so
 vendor/lib/hw/com.qti.chi.override.so
-vendor/lib64/hw/camera.qcom.so|dcee84ffbaf3eba55fe8e256822bcb8a8cd36ab1
-vendor/lib64/hw/com.qti.chi.override.so|4d48887b4b00e2619c4e74c07408f70996566cf3
+vendor/lib64/hw/camera.qcom.so|60ebe364488b68599ece5688848617bc38a720f8
+vendor/lib64/hw/com.qti.chi.override.so|b52442ddd77a014896478ed9b41c84735b71b9df
 vendor/lib/camera/com.samsung.sensormodule.1_0_lsi_s5kgd2.bin
 vendor/lib/camera/com.samsung.tuned.lsi_s5k3l6.bin
 vendor/lib/camera/com.samsung.sensormodule.13_0_lsi_s5kgd2_full.bin
@@ -282,6 +282,11 @@ vendor/lib64/libgf_in_system_lib.so
 # Graphics
 vendor/etc/qdcm_calib_data_ss_dsi_panel_S6E3FC3_AMS646YD01_LO_FHD.xml
 
+# NFC
+vendor/etc/nfc/sec_s3nrn4v_hwreg.bin
+vendor/etc/nfc/sec_s3nrn4v_swreg.bin
+vendor/firmware/nfc/sec_s3nrn4v_firmware.bin
+
 # Sensors
 vendor/lib/sensors.grip.so
 vendor/lib/sensors.ssc.so
@@ -294,12 +299,6 @@ vendor/etc/sensors/config/lsm6dso_0.json
 
 # Touchscreen firmware
 vendor/firmware/tsp_stm/fts5cu56a_a52sxq.bin
-
-# Wifi firmware
-vendor/firmware/qca6750/bdwlan.elf1
-vendor/firmware/qca6750/bdwlan.elf2
-vendor/firmware/qca6750/bdwlan.elf
-vendor/firmware/qca6750/bdwlan.elf10
 
 # Wifi firmware (bootloader revision 1) - from A528BXXU1DWA4 (T)
 vendor/firmware/wpss.b00|bbbf98507f63f2fbc6f04ed5328d88190de9f124
