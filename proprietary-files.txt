@@ -254,29 +254,16 @@ vendor/lib/com.qti.feature2.stub.so
 vendor/lib64/com.qti.feature2.stub.so
 vendor/lib/com.qti.feature2.swmf.so
 vendor/lib64/com.qti.feature2.swmf.so
-vendor/lib/libhypermotion_core.so
-vendor/lib64/libhypermotion_core.so
-vendor/lib/libsec2qc_conversion.so
-vendor/lib64/libsec2qc_conversion.so
-vendor/lib/libdualcam_refocus_image.so
-vendor/lib64/libdualcam_refocus_image.so
-vendor/lib64/libdualcam_refocus_video.so
 
 # Camera firmware
 vendor/firmware/ois_mcu_stm32g_fw.bin
 
 # Fingerprint
-vendor/lib/libbauthserver.so
 vendor/lib64/libbauthserver.so
-vendor/lib/libbauthtzcommon.so
 vendor/lib64/libbauthtzcommon.so
-vendor/lib/libsynaFpSensorTestNwd.so
 vendor/lib64/libsynaFpSensorTestNwd.so
-vendor/lib/libegis_fp_normal_sensor_test.so
 vendor/lib64/libegis_fp_normal_sensor_test.so
-vendor/lib/libqfp_sensortest.so
 vendor/lib64/libqfp_sensortest.so
-vendor/lib/libgf_in_system_lib.so
 vendor/lib64/libgf_in_system_lib.so
 
 # Graphics
