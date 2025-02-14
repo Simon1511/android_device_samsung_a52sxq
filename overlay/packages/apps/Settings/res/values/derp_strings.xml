@@ -13,6 +13,6 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="maintainer">Maintainer</string>
-    <string name="maintainer_name" translatable="false">justinntime</string>
+    <string name="maintainer_name" translatable="false">just_inntime</string>
     <string name="maintainer_telegram" translatable="false">https://github.com/justinntime</string>
 </resources>
