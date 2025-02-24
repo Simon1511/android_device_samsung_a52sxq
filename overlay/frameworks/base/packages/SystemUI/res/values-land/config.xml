@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <!--
      Copyright (C) 2022 The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
 <!-- Thank you yograjfire18 for this! -->
-<resources>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Whether to use the split 2-column notification shade -->
     <bool name="config_use_split_notification_shade">true</bool>
