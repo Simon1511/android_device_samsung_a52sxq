@@ -17,7 +17,7 @@
 DEVICE_PATH := device/samsung/a52sxq
 
 # Derp Flags
-DERP_BUILDTYPE := Unofficial
+DERP_BUILDTYPE := Official
 DERP_VERSION_APPEND_TIME_OF_DAY := true
 EXTRA_UDFPS_ICONS := true
 TARGET_NOT_USES_BLUR := true
