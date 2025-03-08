@@ -16,13 +16,6 @@
 
 DEVICE_PATH := device/samsung/a52sxq
 
-# Derp Flags
-DERP_BUILDTYPE := Official
-DERP_VERSION_APPEND_TIME_OF_DAY := true
-EXTRA_UDFPS_ICONS := true
-TARGET_NOT_USES_BLUR := true
-TARGET_SUPPORTS_QUICK_TAP := true
-
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
 
@@ -44,6 +37,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
     $(DEVICE_PATH)/configs/audio/audio_platform_info_diff.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_diff.xml \
+
+# NFC
+TARGET_HAVE_SEC_NFC := true
 
 # Quick Tap
 PRODUCT_PACKAGES += \

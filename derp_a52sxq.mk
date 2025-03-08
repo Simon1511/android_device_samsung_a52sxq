@@ -30,12 +30,16 @@ $(call inherit-product, vendor/derp/config/common_full_phone.mk)
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
+# Derp Flags
+DERP_BUILDTYPE := Official
+DERP_VERSION_APPEND_TIME_OF_DAY := true
+EXTRA_UDFPS_ICONS := true
+TARGET_NOT_USES_BLUR := true
+TARGET_SUPPORTS_QUICK_TAP := true
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
-
-# NFC
-TARGET_HAVE_SEC_NFC := true
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := derp_a52sxq
