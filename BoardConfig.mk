@@ -20,6 +20,7 @@ include device/samsung/sm7325-common/BoardConfigCommon.mk
 
 # Kernel
 TARGET_KERNEL_CONFIG        := vendor/lineage-a52sxq_defconfig
+#TARGET_KERNEL_CONFIG        := vendor/derp-a52sxq_defconfig
 BOARD_NAME                  := SRPUE26A001
 
 # Kernel modules
