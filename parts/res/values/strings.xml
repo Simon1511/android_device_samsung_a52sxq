@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2020 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Core Settings -->
+    <string name="app_title">Core Settings</string>
+    <string name="tile_add">Add tile</string>
+    <string name="tile_added">Tile added</string>
+    <string name="tile_not_added">Tile not added</string>
+    <string name="tile_already_added">Tile already added</string>
+    <string name="tile_on">On</string>
+    <string name="tile_off">Off</string>
+
+    <!-- Per-app refresh rate -->
+    <string name="refresh_title">Per-app refresh rate</string>
+    <string name="refresh_title_tile_label">Refresh rate</string>
+    <string name="refresh_summary">Set the maximum refresh rate for a specific application</string>
+    <string name="refresh_default">Default</string>
+    <string name="refresh_standard">60Hz</string>
+    <string name="refresh_extreme">120Hz</string>
+
+     <!-- GameBar Overlay -->
+    <string name="game_overlay_title">GameBar</string>
+    <string name="game_overlay_summary">Enable the system overlay (FPS, Temp, etc.)</string>
+    <string name="overlay_permission_required">Overlay permission is required</string>
+    <string name="overlay_permission_granted">Overlay permission granted</string>
+    <string name="overlay_permission_denied">Overlay permission denied</string>
+    <string name="game_overlay_tile_label">GameBar</string>
+    <string name="game_overlay_tile_description">Toggle the game overlay</string>
+
+    <!-- Quick Settings Customization -->
+    <string name="qs_panel_settings_title">QS tiles Customization</string>
+    <string name="qs_panel_settings_summary">Customize how tiles are displayed in quick settings</string>
+    <string name="qs_tile_style">QS tiles style</string>
+    <string name="qs_num_titles">Portrait tile grid</string>
+    <string name="qs_num_rows">Rows</string>
+    <string name="qs_num_columns">Columns</string>
+    <string name="qs_num_rows_landscape">Rows</string>
+    <string name="qs_num_columns_landscape">Columns</string>
+</resources>

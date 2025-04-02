@@ -19,6 +19,10 @@ DEVICE_PATH := device/samsung/a52sxq
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
 
+# Core Packages
+PRODUCT_PACKAGES += \
+    Parts
+
 # Remove Packages
 PRODUCT_PACKAGES += \
     RemovePackages
