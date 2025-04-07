@@ -14,8 +14,12 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <string name="menu_update_branch_entries_first">Release</string>
+    <string name="menu_update_branch_entries_second">Release (rooted)</string>
+
     <string name="updater_server_url" translatable="false">https://raw.githubusercontent.com/justinntime/Updater_OTA/main/a52sxq.json</string>
-    <string name="updater_server_url_root" translatable="false">https://raw.githubusercontent.com/justinntime/Updater_OTA/main/a52sxq-root.json</string>
+    <string name="updater_server_url_second" translatable="false">https://raw.githubusercontent.com/justinntime/Updater_OTA/main/a52sxq-root.json</string>
+
     <string name="menu_changelog_url" translatable="false">https://raw.githubusercontent.com/justinntime/Updater_OTA/main/a52sxq_changelog.txt</string>
 
 </resources>
