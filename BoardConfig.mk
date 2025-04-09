@@ -19,9 +19,20 @@ DEVICE_PATH := device/samsung/a52sxq
 include device/samsung/sm7325-common/BoardConfigCommon.mk
 
 # Kernel
-#TARGET_KERNEL_CONFIG        := vendor/lineage-a52sxq_defconfig
-TARGET_KERNEL_CONFIG        := vendor/derp-a52sxq_defconfig
-BOARD_NAME                  := SRPUE26A001
+#BUILD_NO_ROOT := true
+
+BOARD_NAME := SRPUE26A001
+TARGET_KERNEL_ARCH := arm64
+TARGET_KERNEL_HEADER_ARCH := arm64
+TARGET_LINUX_KERNEL_VERSION := 5.4
+
+ifeq ($(BUILD_NO_ROOT), true)
+    TARGET_KERNEL_CONFIG := vendor/lineage-a52sxq_defconfig
+    TARGET_KERNEL_SOURCE := kernel/samsung/sm7325
+else
+    TARGET_KERNEL_CONFIG := vendor/derp-a52sxq_defconfig
+    TARGET_KERNEL_SOURCE := kernel/samsung/sm7325-susfs
+endif
 
 # Kernel modules
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
