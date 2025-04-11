@@ -127,9 +127,6 @@ on boot
     chown system graphics /sys/class/drm/sde-crtc-0/measured_fps
     chmod 0660 /sys/class/drm/sde-crtc-0/measured_fps
 
-    chown system system /sys/class/thermal/thermal_zone78/temp
-    chmod 0660 /sys/class/thermal/thermal_zone78/temp
-
 # SWAP
 on boot
     write /proc/sys/vm/swappiness 130
