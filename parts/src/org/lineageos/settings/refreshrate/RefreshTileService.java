@@ -25,6 +25,7 @@ import android.view.Display;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.Collections;
 
 public class RefreshTileService extends TileService {
     private static final String KEY_MIN_REFRESH_RATE = "min_refresh_rate";
@@ -48,16 +49,28 @@ public class RefreshTileService extends TileService {
             float rate = Float.valueOf(String.format(Locale.US, "%.02f", m.getRefreshRate()));
             if (m.getPhysicalWidth() == mode.getPhysicalWidth() &&
                 m.getPhysicalHeight() == mode.getPhysicalHeight()) {
-                availableRates.add(rate);
+                if (!availableRates.contains(rate)) {
+                    availableRates.add(rate);
+                }
             }
         }
+        
+        Collections.sort(availableRates);
+
         syncFromSettings();
     }
 
     private int getSettingOf(String key) {
         float rate = Settings.System.getFloat(context.getContentResolver(), key, 60);
-        return availableRates.indexOf(
-                Float.valueOf(String.format(Locale.US, "%.02f", rate)));
+        Float formattedRate = Float.valueOf(String.format(Locale.US, "%.02f", rate));
+        int index = availableRates.indexOf(formattedRate);
+
+        if (index == -1) {
+            android.util.Log.w("RefreshTileService", "Unknown refresh rate in settings: " + formattedRate);
+            return 0; // Fallback to the first available rate
+        }
+
+        return index;
     }
 
     private void syncFromSettings() {
@@ -84,12 +97,21 @@ public class RefreshTileService extends TileService {
     }
 
     private void updateTileView() {
-        String displayText;
+        if (availableRates.isEmpty()) {
+            android.util.Log.w("RefreshTileService", "No available refresh rates found.");
+            return;
+        }
+
+        // Ensure indices are valid
+        if (activeRateMin < 0 || activeRateMin >= availableRates.size()) activeRateMin = 0;
+        if (activeRateMax < 0 || activeRateMax >= availableRates.size()) activeRateMax = 0;
+
         float min = availableRates.get(activeRateMin);
         float max = availableRates.get(activeRateMax);
 
-        displayText = String.format(Locale.US, min == max ? "%s" : "%s - %s",
+        String displayText = String.format(Locale.US, min == max ? "%s" : "%s - %s",
             getFormatRate(min), getFormatRate(max));
+
         tile.setContentDescription(displayText);
         tile.setSubtitle(displayText);
         tile.setState(min == max ? Tile.STATE_ACTIVE : Tile.STATE_INACTIVE);
